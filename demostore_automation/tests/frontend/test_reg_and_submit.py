@@ -1,10 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-options =   webdriver.ChromeOptions()
-options.add_experimental_option('detach', True)
-
-driver = webdriver.Chrome(options=options)
 
 driver = webdriver.Chrome()
 driver.get('http://127.0.0.1:8888/Mysite2/')
@@ -24,3 +20,4 @@ p_field.send_keys('Mypassword1234!!')
 # selecting and clicking on the register button
 reg_btn = driver.find_element('css selector', '#customer_login > div.u-column2.col-2 > form > p:nth-child(5) > button')
 reg_btn.click()
+
